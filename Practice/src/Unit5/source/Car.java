@@ -1,4 +1,4 @@
-package source;
+package Unit5.source;
 
 public class Car {
   private int SPEED_LIMIT = 10; // 기어 1단 - 10, 2단 - 20 ... n단 - 10n

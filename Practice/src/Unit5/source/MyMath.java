@@ -1,4 +1,4 @@
-package source;
+package Unit5.source;
 
 // 맴버를 사용하지 않는 메서드 -> 클래스 메서드로 만들어 주기
 public class MyMath {
