@@ -1,9 +1,9 @@
-package Unit5.source;
+package Unit5;
 
 public class Person {
   /*
    * 맴버 변수는 특별한 이유가 없는한 private로 만들어라.
-   * 그 멤버 변수를 클래스 외부에서 접근해야 한다면 그를 위한 
+   * 그 멤버 변수를 클래스 외부에서 접근해야 한다면 그를 위한
    * method를 public으로 구현해라.
    * 예를 들어, myAge라는 맴버 변수에 값을 설정해야 하는 메소드는
    * set Age로, myAgrfksms 맴버 변수에 값을 읽어오는 메서드는 getAge로
@@ -12,7 +12,7 @@ public class Person {
    * 향후에 그 클래스를 버전업 하면서 맴버 변수의 이름을 변경해도
    * 그 클래스를 사용하는 외부 클래스에는 아무 영향을 미치지 않게 된다.
    */
-  
+
   /*
    * 접근제어자
    * public, protected, default, private
@@ -23,16 +23,21 @@ public class Person {
    */
   private String name;
   private int age;
+  String dept= "컴정";
 
   public String getName() {
     return name;
   }
 
+  public String getDept() {
+    return dept;
+  }
+
   public void setAge(int age) {
-    if (age >= 0 && age <= 150){
+    if (age >= 0 && age <= 150) {
       this.age = age;
     }
-    
+
     else {
       System.out.println("나이의 범위는 0부터 150까지입니다.");
     }
@@ -42,4 +47,7 @@ public class Person {
     return age;
   }
 
+  private void test() {
+    System.out.println(name);
+  }
 }

@@ -1,4 +1,4 @@
-package Unit5.source;
+package Unit5;
 
 public class Television {
   private int channel;    // 채널
