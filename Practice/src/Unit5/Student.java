@@ -1,29 +1,24 @@
 package Unit5;
 
-import java.time.LocalDate;
-
 public class Student {
+  private int number;
   private String name;
-  private int birthYear;
+  private int age;
 
-  public void setName(String name) {
+  Student() {
+    number = 100;
+    name = "New Student";
+    age = 18;
+  }
+
+  Student(int number, String name, int age) {
+    this.number = number;
     this.name = name;
+    this.age = age;
   }
 
-  public void setBirthYear(int birthYear) {
-    if (birthYear >= 1900) {
-      this.birthYear = birthYear;
-      return;
-    }
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public int getAge() {
-    LocalDate d = LocalDate.now();
-    int year = d.getYear();
-    return (year - birthYear);
+  @Override
+  public String toString() {
+    return "Student [number=" + number + ", name=" + name + ", age=" + age + "]";
   }
 }

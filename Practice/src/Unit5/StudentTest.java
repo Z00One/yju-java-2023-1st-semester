@@ -2,11 +2,10 @@ package Unit5;
 
 public class StudentTest {
   public static void main(String[] args) {
-    Student std = new Student();
-    std.setName("고길동");
-    std.setBirthYear(2002);
+    Student obj1 = new Student();
+    System.out.println(obj1);
 
-    System.out.println(std.getName());
-    System.out.println(std.getAge());
+    Student obj2 = new Student(111, "Kim", 25);
+    System.out.println(obj2);
   }
 }
