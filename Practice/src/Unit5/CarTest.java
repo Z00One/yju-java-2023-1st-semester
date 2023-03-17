@@ -6,7 +6,7 @@ public class CarTest {
     Car car0 = new Car();
 
     // 색상 설정
-    car0.setColor("green");
+    
 
     // 증속
     for (int i = 0; i < 80; i+=5) {

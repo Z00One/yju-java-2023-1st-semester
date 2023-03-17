@@ -1,17 +1,32 @@
 package Unit5;
 
 public class Car {
-  private int SPEED_LIMIT = 10; // 기어 1단 - 10, 2단 - 20 ... n단 - 10n
-  private int MAX_SPEED = 80;   // 최고 속도
+  private final int SPEED_LIMIT = 10; // 기어 1단 - 10, 2단 - 20 ... n단 - 10n
+  private final int MAX_SPEED = 80;   // 최고 속도
 
   private String color;     // 색상
   private int speed;        // 속도
-  private int gear = 1;     // 기어
+  private int gear;         // 기어
 
-  // 색 설정
-  void setColor(String colorArg) {
-    this.color = colorArg;
+  {
+    System.out.println("차를 만들었어요");
+    speed = 0;
+    gear = 0;
+  }
+
+  Car() {
+    // 기본값
+    this("black", 0, 0);
+  }
+
+  Car(String color, int speed, int gear) {
+    this.color = color;
   };
+
+  // 차 색상 바꾸기
+  void changeColor(String color) {
+    this.color = color;
+  }
 
   // 가속
   void speedUp() {
