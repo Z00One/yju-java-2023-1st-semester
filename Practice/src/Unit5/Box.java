@@ -1,10 +1,5 @@
 package Unit5;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
-
 public class Box {
   private int width, length, height; // 가로
   private int volume; // 부피
