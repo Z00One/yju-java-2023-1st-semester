@@ -1,4 +1,4 @@
-package Unit5;
+package Unit6;
 
 public class Rectangle {
   private int x, y;
