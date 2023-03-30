@@ -1,5 +1,5 @@
-
-public class CarCounter {
+package Unit7.Inheritance;
+public class CarCounter extends Car{
   private String model;
   private String color;
   private int speed;
@@ -54,6 +54,7 @@ public class CarCounter {
     System.out.println(c2.numbers + ", " + c2.id);
     c3 = new CarCounter("s600", "white", 80);
     System.out.println(c3.numbers + ", " + c3.id);
-
+    
+    System.out.println(c1.getSpeed());
   }
 }
