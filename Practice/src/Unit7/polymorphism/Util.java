@@ -1,5 +1,7 @@
 package Unit7.polymorphism;
 
+import Unit7.interfacetest.Comparable;
+
 public class Util {
 
   public static void sortList(Comparable[] list) {
@@ -10,7 +12,7 @@ public class Util {
 
       for (int j = index + 1; j < list.length; j++) {
         // 비교해보고 0 보다 큰 값이 나오면
-          if (list[minIndex].CompareTo(list[j]) > 0){
+          if (list[minIndex].compareTo(list[j]) > 0){
             minIndex = j;
           }
       }

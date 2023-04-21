@@ -1,6 +1,7 @@
 package Unit7.polymorphism;
 
-public class Student extends Comparable {
+import Unit7.interfacetest.Comparable;
+public class Student implements Comparable {
   private String name;
   private String stdNum;
 
@@ -26,7 +27,7 @@ public class Student extends Comparable {
   }
 
   @Override
-  public int CompareTo(Comparable anotherVal) {
+  public int compareTo(Comparable anotherVal) {
     
     Student std = (Student)anotherVal;  // another , Student에 접근할 수 있게 하향 형 변환
     
@@ -41,4 +42,5 @@ public class Student extends Comparable {
   public String toString() {
     return "[이름은 " + name + " 학번은 " + stdNum + "]";
   }
+
 }

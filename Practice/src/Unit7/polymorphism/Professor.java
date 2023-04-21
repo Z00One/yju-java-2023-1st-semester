@@ -1,6 +1,7 @@
 package Unit7.polymorphism;
+import Unit7.interfacetest.Comparable;
 
-public class Professor extends Comparable {
+public class Professor implements Comparable{
   private String name;
   private String property;
 
@@ -26,7 +27,7 @@ public class Professor extends Comparable {
   }
 
   @Override
-  public int CompareTo(Comparable anotherVal) {
+  public int compareTo(Comparable anotherVal) {
     Professor pro = (Professor)anotherVal;
     
     String proName = pro.getProperty();
