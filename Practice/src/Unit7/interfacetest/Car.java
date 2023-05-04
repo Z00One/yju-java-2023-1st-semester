@@ -1,23 +1,33 @@
 package Unit7.interfacetest;
 
-public class Car implements Comparable {
+public class Car implements Comparable{
   private String brand;
   private String model;
-  private int speed = 0;
+  private int speed;
   private int price;
 
-  public Car(String brand, String model, int price){
+  public Car(String brand, String model, int speed, int price) {
     this.brand = brand;
     this.model = model;
+    this.speed = speed;
     this.price = price;
   }
-  
+
   public Car() {
-    this("unknown", "unknown", 0);
+    // this.brand = "Unknown";
+    // this.model = "Unknown";
+    // this.speed = 0;
+    // this.price = 0;
+    this("Unknown", "Unknown", 0, 0);
   }
 
+  @Override
+  public String toString() {
+    return "[브랜드:" + brand+", 모델:"+model+", speed:"+speed+", price:"+price+"]";
+  }
+  
   public String getBrand() {
-    return this.brand;
+    return brand;
   }
 
   public void setBrand(String brand) {
@@ -25,7 +35,7 @@ public class Car implements Comparable {
   }
 
   public String getModel() {
-    return this.model;
+    return model;
   }
 
   public void setModel(String model) {
@@ -33,48 +43,40 @@ public class Car implements Comparable {
   }
 
   public int getSpeed() {
-    return this.speed;
+    return speed;
   }
 
-  public void plusSpeed() {
-    this.speed++;
-  }
-
-  public void minusSpeed() {
-    this.speed--;
+  public void setSpeed(int speed) {
+    this.speed = speed;
   }
 
   public int getPrice() {
-    return this.price;
+    return price;
   }
 
   public void setPrice(int price) {
     this.price = price;
   }
-  
-  @Override
-  public int compareTo(Comparable obj){
-    int returnValue = 0;
-
-    Car anotheCar = (Car)obj;
-
-    if (price == anotheCar.getPrice()) {
-      returnValue = 0;
-    }
-
-    if (price > anotheCar.getPrice()) {
-      returnValue = 1;
-    }
-
-    if (price < anotheCar.getPrice()) {
-      returnValue = -1;
-    }
-
-    return returnValue;
-  };
 
   @Override
-  public String toString() {
-    return "[ 브랜드 :" + this.brand + ", 모델 :" + this.model + ", 가격 :" + this.price +  "]";
+  public int compareTo(Comparable obj) {
+    // 차의 가격 비교를 하려면, Car 클래스의 
+    // getPrice 메소드를 호출해야되니, 부득이
+    // Comparable 타입으로 받은 인자를
+    // Car 타입으로 하향 형변환. 
+    // 물로 이 obj 객체는 Car 클래스 타입의 객체이어야만 하고, 
+    // 그렇다고 가정한다. 
+    Car aCar = (Car)obj;
+    // 내차 가격과 인자로 전달된 차의 가격을 비교
+    int aPrice = aCar.getPrice();
+    if (price == aPrice) {
+      return 0;
+    } else if (price > aPrice) {
+      return 1;
+    } else {
+      return -1;
+    }
+
   }
+  
 }

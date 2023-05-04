@@ -1,4 +1,5 @@
 package 연습;
+
 class A {
   int x = 3;
   int y = 5;

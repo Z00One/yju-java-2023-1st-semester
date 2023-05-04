@@ -2,8 +2,8 @@ package Unit7.interfacetest;
 
 public class CarTest {
   public static void main(String[] args) {
-    Car c1 = new Car("bmw", "x6", 1000);
-    Car c2 = new Car("bmw", "x100", 9000);
+    Car c1 = new Car("bmw", "x6", 1000, 0);
+    Car c2 = new Car("bmw", "x100", 9000, 0);
     Car c3 = new Car();
 
     System.out.println(c3);

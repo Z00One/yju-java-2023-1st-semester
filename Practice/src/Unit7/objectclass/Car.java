@@ -26,6 +26,7 @@ public class Car {
   }
 
   public Car() {
+    // 다른 생성자 사용
     this("unknown", "unknown");
   }
 

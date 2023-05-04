@@ -13,7 +13,9 @@ public class Student implements Comparable{
     this.dept = dept;
   }
   
-   @Override
+  public Student() {
+  }
+  @Override
   public int compareTo(Comparable obj) {
     // null인 경우는 없다고 가정
     // interface는 class처럼 데이터 타입으로 사용될 수 있다. 
